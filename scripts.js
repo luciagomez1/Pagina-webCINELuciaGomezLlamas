@@ -1,11 +1,10 @@
-let myImage = document.querySelector('#myImage');
-let myButton = document.querySelector('#myButton');
-let myHeading = document.querySelector('#user-name');
-let inputText = document.querySelector('#inputText');
-let dynamicText = document.querySelector('#dynamicText');
-let movimiento = document.querySelector('#movimiento');
+// Selección de elementos en el DOM
+let myImage = document.querySelector('#myImage'); // Imagen
+let myButton = document.querySelector('#myButton'); // Botón
+let myHeading = document.querySelector('#user-name'); // Elemento donde se muestra el nombre
+let movimiento = document.querySelector('#movimiento'); // Objeto en movimiento (carrete de cine)
 
-// Cambio de imagen al hacer clic
+// Función para cambiar la imagen al hacer clic
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
   if (mySrc === 'https://www.arteybohemia.com/wp-content/uploads/elementor/thumbs/3-Salas-Cine-Imagenes-3-bis-ojykroda6sgymf0k2t9jacx7ldgifdnuv0bdm87o2k.jpg') {
@@ -15,19 +14,20 @@ myImage.onclick = function() {
   }
 };
 
-// Función para cambiar el nombre
+// Función para pedir al usuario su nombre
 function setUserName() {
   let myName = prompt('Por favor, ingresa tu nombre:');
   if (!myName || myName === null) {
-    setUserName();
+    setUserName(); // Si no ingresa un nombre, vuelve a pedirlo
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.innerHTML = myName;
+    localStorage.setItem('name', myName); // Guardar el nombre en localStorage
+    myHeading.innerHTML = myName; // Mostrar el nombre en el HTML
   }
 }
 
+// Si ya hay un nombre guardado, mostrarlo; si no, pedirlo
 if (!localStorage.getItem('name')) {
-  setUserName();
+  setUserName(); 
 } else {
   let storedName = localStorage.getItem('name');
   myHeading.innerHTML = storedName;
@@ -38,23 +38,18 @@ myButton.onclick = function() {
   setUserName();
 };
 
-// Cambio de texto al escribir
-inputText.addEventListener('input', function() {
-  dynamicText.textContent = inputText.value;
-});
-
-// Animación del objeto
+// Animación del carrete de cine en movimiento
 let posX = 0;
 let posY = 0;
 
 function moverObjeto() {
   if (posX < window.innerWidth - 50 && posY === 0) {
-    posX += 5;
+    posX += 5; // Movimiento horizontal
   } else if (posX >= window.innerWidth - 50 && posY < window.innerHeight - 50) {
-    posY += 5;
+    posY += 5; // Movimiento vertical
   } else {
-    posX = 0;
-    posY = 0;
+    posX = 0; // Reiniciar posición horizontal
+    posY = 0; // Reiniciar posición vertical
   }
 
   movimiento.style.transform = `translate(${posX}px, ${posY}px)`;
@@ -62,3 +57,4 @@ function moverObjeto() {
 }
 
 moverObjeto();
+
