@@ -1,32 +1,40 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Evolución del Cine</title>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>La Magia del Cine</h1>
   
+  <!-- Imagen de cine que cambia al hacer clic -->
   <img id="myImage" src="https://www.arteybohemia.com/wp-content/uploads/elementor/thumbs/3-Salas-Cine-Imagenes-3-bis-ojykroda6sgymf0k2t9jacx7ldgifdnuv0bdm87o2k.jpg" alt="Proyector antiguo de cine">
-  <p>El cine ha transformado profundamente la manera en que contamos historias y compartimos emociones. Desde sus orígenes humildes, ha pasado por una evolución constante, adoptando nuevas tecnologías y estilos que han enriquecido la experiencia cinematográfica. A lo largo del tiempo, ha sido un reflejo de los avances sociales y técnicos, ofreciendo una plataforma para explorar la creatividad y conectar con audiencias de todo el mundo.</p>
   
+  <p>El cine ha transformado profundamente la manera en que contamos historias y compartimos emociones. Desde sus orígenes humildes, ha pasado por una evolución constante, adoptando nuevas tecnologías y estilos que han enriquecido la experiencia cinematográfica.</p>
+
   <ul>
-    <li><strong>Los inicios del cine: los hermanos Lumière :</strong> El cine comenzó en 1895 con los hermanos Lumière, quienes inventaron el cinematógrafo y realizaron la primera proyección de imágenes en movimiento, marcando el inicio del cine como entretenimiento.</li>
-    <li><strong>El auge del cine sonoro :</strong> En 1927, con el estreno de El cantante de jazz, el cine mudo dio paso al cine sonoro, incorporando diálogos y efectos que transformaron la forma de contar historias.</li>
-    <li><strong>La revolución del cine digital :</strong> A finales del siglo XX, el cine digital y los avances en CGI permitieron una mayor accesibilidad y efectos visuales innovadores, cambiando la forma de producir y disfrutar las películas.</li>
+    <li><strong>Los inicios del cine: los hermanos Lumière :</strong> El cine comenzó en 1895 con los hermanos Lumière, quienes inventaron el cinematógrafo y realizaron la primera proyección de imágenes en movimiento.</li>
+    <li><strong>El auge del cine sonoro :</strong> En 1927, con el estreno de El cantante de jazz, el cine mudo dio paso al cine sonoro.</li>
+    <li><strong>La revolución del cine digital :</strong> A finales del siglo XX, el cine digital permitió una mayor accesibilidad y efectos visuales innovadores.</li>
   </ul>
-  
+
   <p>
-    Descubre cómo el cine ha impactado a la sociedad y sigue transformándose. <a href="https://es.wikipedia.org/wiki/Cine" target="_blank">Haz clic aquí para explorar más.</a>
+    Descubre cómo el cine ha impactado a la sociedad y sigue transformándose. <a href="https://es.wikipedia.org/wiki/Cine" target="_blank" title="Enlace externo al artículo de Wikipedia sobre Cine">Haz clic aquí para explorar más.</a>
   </p>
   
-  
   <button id="myButton">Cambiar usuario</button>
-
   <h2 id="user-name">Tu nombre aquí</h2>
 
+  <!-- Campo de texto para cambiar el contenido de la página -->
+  <input type="text" id="inputText" placeholder="Escribe algo para cambiar el texto aquí">
+  <p id="dynamicText">Este texto cambiará cuando escribas algo.</p>
+
+  <!-- Objeto en movimiento -->
+  <div id="movimiento" class="cuadro"></div>
 
   <script src="scripts.js"></script>
 </body>
