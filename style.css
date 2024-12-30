@@ -107,9 +107,8 @@ a:hover {
   top: 100px;
   left: 50px;
   background-image: url('images/carrete.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
+}}
 
-}
