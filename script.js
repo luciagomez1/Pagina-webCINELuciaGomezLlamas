@@ -57,7 +57,7 @@ let velocityX = 3; // Velocidad horizontal
 let velocityY = 3; // Velocidad vertical
 
 // Función para mover el carrete
-function moveCarrete() {
+function movecarrete() {
   posX += velocityX;
   posY += velocityY;
 
@@ -76,8 +76,8 @@ function moveCarrete() {
   carrete.style.top = `${posY}px`;
 
   // Llamar a la función moveCarrete una vez por frame (para animar el movimiento)
-  requestAnimationFrame(moveCarrete);
+  requestAnimationFrame(movecarrete);
 }
 
 // Iniciar el movimiento del carrete
-moveCarrete();
+movecarrete();
