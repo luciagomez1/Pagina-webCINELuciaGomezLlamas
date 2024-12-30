@@ -43,22 +43,41 @@ inputText.addEventListener('input', function() {
   dynamicText.textContent = inputText.value;
 });
 
-// Animación del objeto
+// Selección del carrete
+const carrete = document.querySelector('.carrete');
+
+// Dimensiones del contenedor (pantalla)
+const containerWidth = window.innerWidth;
+const containerHeight = window.innerHeight;
+
+// Posición y velocidad iniciales del carrete
 let posX = 0;
 let posY = 0;
+let velocityX = 3; // Velocidad horizontal
+let velocityY = 3; // Velocidad vertical
 
-function moverObjeto() {
-  if (posX < window.innerWidth - 50 && posY === 0) {
-    posX += 5;
-  } else if (posX >= window.innerWidth - 50 && posY < window.innerHeight - 50) {
-    posY += 5;
-  } else {
-    posX = 0;
-    posY = 0;
+// Función para mover el carrete
+function moveCarrete() {
+  posX += velocityX;
+  posY += velocityY;
+
+  // Rebote horizontal (cuando el carrete llega al borde derecho o izquierdo de la pantalla)
+  if (posX + 60 > containerWidth || posX < 0) {
+    velocityX = -velocityX;
   }
 
-  movimiento.style.transform = `translate(${posX}px, ${posY}px)`;
-  requestAnimationFrame(moverObjeto);
+  // Rebote vertical (cuando el carrete llega al borde superior o inferior de la pantalla)
+  if (posY + 60 > containerHeight || posY < 0) {
+    velocityY = -velocityY;
+  }
+
+  // Actualizar la posición del carrete
+  carrete.style.left = `${posX}px`;
+  carrete.style.top = `${posY}px`;
+
+  // Llamar a la función moveCarrete una vez por frame (para animar el movimiento)
+  requestAnimationFrame(moveCarrete);
 }
 
-moverObjeto();
+// Iniciar el movimiento del carrete
+moveCarrete();
