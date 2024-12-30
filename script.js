@@ -44,41 +44,38 @@ document.addEventListener("DOMContentLoaded", function() {
     dynamicText.textContent = inputText.value;
   });
 
-  // Dimensiones del contenedor (pantalla)
+  
   const containerWidth = window.innerWidth;
   const containerHeight = window.innerHeight;
 
-  // Posición y velocidad iniciales del carrete
   let posX = 0;
   let posY = 0;
-  let velocityX = 10; // Velocidad horizontal más rápida
-  let velocityY = 3;  // Velocidad vertical, si deseas modificarla también
+  let velocityX = 10; 
+  let velocityY = 3;  
 
   // Función para mover el carrete
   function movecarrete() {
     posX += velocityX;
     posY += velocityY;
 
-    // Rebote horizontal (cuando el carrete llega al borde derecho o izquierdo de la pantalla)
+   
     if (posX + 60 > containerWidth || posX < 0) {
-      // Hacer que el carrete vuelva a entrar más rápido por la izquierda
-      posX = 0; // Reiniciar la posición a la izquierda (sin rebote lento)
+     
+      posX = 0;
     }
 
-    // Rebote vertical (cuando el carrete llega al borde superior o inferior de la pantalla)
+   
     if (posY + 60 > containerHeight || posY < 0) {
-      velocityY = -velocityY; // Cambiar dirección vertical
+      velocityY = -velocityY; 
     }
 
-    // Actualizar la posición del carrete
     carrete.style.left = `${posX}px`;
     carrete.style.top = `${posY}px`;
 
-    // Llamar a la función movecarrete una vez por frame (para animar el movimiento)
+   
     requestAnimationFrame(movecarrete);
   }
 
-  // Iniciar el movimiento del carrete
   movecarrete();
 });
 
