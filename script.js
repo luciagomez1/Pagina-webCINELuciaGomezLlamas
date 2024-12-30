@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Posición y velocidad iniciales del carrete
   let posX = 0;
   let posY = 0;
-  let velocityX = 3; // Velocidad horizontal
-  let velocityY = 3; // Velocidad vertical
+  let velocityX = 10; // Velocidad horizontal más rápida
+  let velocityY = 3;  // Velocidad vertical, si deseas modificarla también
 
   // Función para mover el carrete
   function movecarrete() {
@@ -61,12 +61,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Rebote horizontal (cuando el carrete llega al borde derecho o izquierdo de la pantalla)
     if (posX + 60 > containerWidth || posX < 0) {
-      velocityX = -velocityX;
+      // Hacer que el carrete vuelva a entrar más rápido por la izquierda
+      posX = 0; // Reiniciar la posición a la izquierda (sin rebote lento)
     }
 
     // Rebote vertical (cuando el carrete llega al borde superior o inferior de la pantalla)
     if (posY + 60 > containerHeight || posY < 0) {
-      velocityY = -velocityY;
+      velocityY = -velocityY; // Cambiar dirección vertical
     }
 
     // Actualizar la posición del carrete
