@@ -100,17 +100,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Objeto en movimiento */
-.cuadro {
-width: 50px;
-  height: 50px;
-  background-color: #FFD700; 
+.carrete {
+  width: 60px;
+  height: 60px;
   position: absolute;
   top: 100px;
   left: 50px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
-  background-image: url('https://cdn-icons-png.flaticon.com/512/2609/2609391.png'); /* Icono de cine */
+  background-image: url('images/carrete.png');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+}
+
 }
