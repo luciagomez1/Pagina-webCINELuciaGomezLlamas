@@ -12,7 +12,7 @@ Además, contiene una imagen a mayores de las dos asociadas al js , a modo de fo
 - Animación de carrete de película: Un carrete de película se mueve por la pantalla, rebotando cuando toca los bordes.
 
 -Ampliación de información para los más interesados:El usuario que desee ampliar su conocimiento sobre el cine, puede hacerlo mediante
-un enlace resaltado en color azul situado en la parte baja de la página , que le redigirá a la wikipedia, donde puee seguir leyendo sobre el tema.
+un enlace resaltado en color azul situado en la parte baja de la página , que le redigirá a la wikipedia, donde puede seguir leyendo sobre el tema.
 
 ->Tecnologías utilizadas
 - HTML: Para estructurar la página web.
