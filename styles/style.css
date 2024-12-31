@@ -103,7 +103,7 @@ a:hover {
 }
 
 /* Carrete */
-.carrete {
+#movimiento {
   width: 160px;
   height: 160px;
   position: absolute;
