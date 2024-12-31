@@ -10,6 +10,7 @@ Además, contiene una imagen a mayores de las dos asociadas al js , a modo de fo
 - Personalización del nombre de usuario: Los usuarios pueden ingresar su nombre, y este se guardará para que se muestre en la página.
 - Campo de texto interactivo: Lo que se escribe en un campo de texto se muestra dinámicamente en otro lugar de la página.
 - Animación de carrete de película: Un carrete de película se mueve por la pantalla, rebotando cuando toca los bordes.
+- 
 -Ampliación de información para los más interesados:El usuario que desee ampliar su conocimiento sobre el cine, puede hacerlo mediante
 un enlace resaltado en color azul situado en la parte baja de la página , que le redigirá a la wikipedia, donde puee seguir leyendo sobre el tema.
 
