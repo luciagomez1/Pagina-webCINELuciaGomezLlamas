@@ -21,8 +21,8 @@ function setUserName() {
   if (!myName || myName === null) {
     setUserName(); // Si no ingresa un nombre, vuelve a pedirlo
   } else {
-    localStorage.setItem('name', myName); // Guardar el nombre en localStorage
-    myHeading.innerHTML = myName; // Mostrar el nombre en el HTML
+    localStorage.setItem('name', myName); // Guardar el nombre 
+    myHeading.innerHTML = myName; 
   }
 }
 
@@ -45,12 +45,12 @@ let posY = 0;
 
 function moverObjeto() {
   if (posX < window.innerWidth - 50 && posY === 0) {
-    posX += 5; // Movimiento horizontal
+    posX += 5; 
   } else if (posX >= window.innerWidth - 50 && posY < window.innerHeight - 50) {
-    posY += 5; // Movimiento vertical
+    posY += 5; 
   } else {
-    posX = 0; // Reiniciar posición horizontal
-    posY = 0; // Reiniciar posición vertical
+    posX = 0; 
+    posY = 0; 
   }
 
   movimiento.style.transform = `translate(${posX}px, ${posY}px)`;
